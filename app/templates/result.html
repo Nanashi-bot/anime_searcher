@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Anime Details</title>
+</head>
+<body>
+    <h1>Anime Details</h1>
+    {% if anime_details %}
+        <img src={{ anime_details.image }}>
+        <p><strong>Title:</strong> {{ anime_details.title }}</p>
+        <p><strong>Score:</strong> {{ anime_details.score }}</p>
+        <p><strong>Rank:</strong>  {{ anime_details.rank }}</p>
+        <p><strong>Genres:</strong> {{ anime_details.genres | join(', ') }}</p>
+    {% else %}
+        <p>Anime not found. Please try again.</p>
+    {% endif %}
+    <a href="/">Search again</a>
+</body>
+</html>
+
